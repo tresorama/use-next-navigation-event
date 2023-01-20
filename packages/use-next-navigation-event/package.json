@@ -1,6 +1,6 @@
 {
   "name": "use-next-navigation-event",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Do something on Next.js router navigation events.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
