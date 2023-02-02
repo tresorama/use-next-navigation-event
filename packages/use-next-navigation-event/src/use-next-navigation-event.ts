@@ -4,7 +4,7 @@ import Router, { type NextRouter } from "next/router";
 
 type LastNavigationEvent = { type: 'BACK_OR_FORWARD' | 'REGULAR_NAVIGATION'; oldUrl: string; };
 const _lastNavigationEvent = {
-  getStorage: () => new LocalStorage<LastNavigationEvent>('app-shell-lastNavigationEvent'),
+  getStorage: () => new LocalStorage<LastNavigationEvent>('use-next-navigation-event__lastNavigationEvent'),
   saveEvent: (event: LastNavigationEvent) => {
     const storage = _lastNavigationEvent.getStorage();
     storage.save(event);
