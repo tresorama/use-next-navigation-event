@@ -20,17 +20,48 @@ const _lastNavigationEvent = {
 };
 
 type Options = {
+  /**
+   * Handler invoked `BEFORE` transitioning to new page/route, 
+   */
   onRouteChangeStart?: (navigationEvent: NavigationEvent) => void,
+  /**
+   * Handler invoked `AFTER` transitioning to new page/route, 
+   */
   onRouteChangeComplete?: (navigationEvent: NavigationEvent) => void,
-  onWindowBeforeUnload?: () => void,
+  /**
+   * Handler invoked when the browser tab is going to be deactivated and closed.  
+   */
+  onWindowBeforeUnload?: (event: BeforeUnloadEvent) => void,
 };
 type NavigationEvent = {
+  /**
+   * How this navigation transition was triggered ?
+   */
   type: LastNavigationEvent['type'],
+  /**
+   * Url navigation is coming from.  
+   */
   oldUrl: string,
+  /**
+   * Url navigation is going to.  
+   * This is the 1nd argument passed by `next/router`
+   */
   newUrl: string, // next 1st argument
+  /**
+   * Options passed to `<Link>` or `router.push(...)` when triggering navigation
+   * This is the 2nd argument passed by `next/router`
+   */
   options: any; // next 2nd argument
 };
 
+/**
+ * React hooks that let you subscribe (and run a callback function) to events triggered by navigation in your Next.js app.  
+ *   
+ * A navigation is a transition from a page/route to an other one, it can be triggered by:
+ * - `<Link>` click (from `next/link`)
+ * - `router.push(...)` and similar methods of `next/router`
+ * - Browser UI Navigation triggers, like "forward", "back", "refresh" button
+ */
 export const useNextNavigationEvent = (options: Options) => {
   const _options = useRef(options);
 
