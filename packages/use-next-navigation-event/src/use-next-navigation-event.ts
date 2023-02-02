@@ -104,7 +104,7 @@ export const useNextNavigationEvent = (options: Options) => {
       // Note:
       // This handler is invoked when the browser tab is going to be deactivated and closed
 
-      _options.current.onWindowBeforeUnload?.();
+      _options.current.onWindowBeforeUnload?.(event);
       // delete event['returnValue'];
     };
 
