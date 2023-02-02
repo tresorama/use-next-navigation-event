@@ -1,6 +1,6 @@
 {
   "name": "use-next-navigation-event",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Do something on Next.js router navigation events.",
   "author": "Jacopo Marrone <@tresorama> <jacopo.marrone27@gmail.com> (https://github.com/tresorama)",
   "license": "MIT",
