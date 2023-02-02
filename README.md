@@ -1,4 +1,10 @@
-# Turborepo starter
+# use-next-navigation-event
+
+You're are looking for documentation ? [Go Here](packages/use-next-navigation-event/README.md).  
+
+Here it's root of the monorepo.  
+
+## Turborepo starter
 
 This is an official pnpm starter turborepo.
 
