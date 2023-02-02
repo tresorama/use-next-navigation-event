@@ -2,6 +2,12 @@
   "name": "use-next-navigation-event",
   "version": "0.0.3",
   "description": "Do something on Next.js router navigation events.",
+  "author": "Jacopo Marrone <@tresorama> <jacopo.marrone27@gmail.com> (https://github.com/tresorama)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tresorama/use-next-navigation-event"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -15,8 +21,6 @@
     "react",
     "next/router"
   ],
-  "author": "Jacopo Marrone <@tresorama> <jacopo.marrone27@gmail.com> (https://github.com/tresorama)",
-  "license": "MIT",
   "peerDependencies": {
     "next": ">=13.0.0",
     "react": ">=18.2.0",
